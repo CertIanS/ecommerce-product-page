@@ -9,11 +9,12 @@
   <title>Frontend Mentor | E-commerce product page</title>
   <link href='https://fonts.googleapis.com/css?family=Kumbh Sans' rel='stylesheet'>
   <link href="./styles.css" rel="stylesheet">
+  <script defer src="./main.js"></script>
 </head>
 <body>
   <main>
     <header>
-      <a href="#" id="openMenu"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
+      <a href="#" id="openMenu" onclick="showMenu();"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
       <img src="./images/logo.svg" alt="logo" width="138" height="20"/>
       <nav id="desktopMenu">
         <ul>
@@ -53,6 +54,17 @@
       <button><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
     </section>
     </section>
+    
   </main>
+  <nav id="mobileMenu">
+      <a href="#" id="closeMenu" onclick="hideMenu();"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 </body>
 </html>

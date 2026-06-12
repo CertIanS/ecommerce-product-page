@@ -39,7 +39,30 @@ button{
     text-decoration: line-through;
 }
 
+/*#mobileMenu{
+    visibility: hidden;
+    /*position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+}*/
+
+.show{
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20em;
+    height: 100vh;
+    background-color: white;
+}
+
 @media(max-width: 60em){
+    nav{
+        visibility: hidden;
+        width: 0;
+    }
+
     #desktopMenu{
         display: none;
     }
@@ -68,5 +91,9 @@ button{
 
     #productImages img{
         border-radius: 1.0em;
+    }
+
+    #mobileMenu{
+        display: none;
     }
 }
