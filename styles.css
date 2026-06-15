@@ -27,16 +27,33 @@ li a{
 
 li a:hover{
     color: hsl(220, 13%, 13%);
+    text-decoration: underline hsl(26, 100%, 55%);
 }
 
 button{
     background-color: hsl(26, 100%, 55%);
     border: none;
+    border-radius: 0.7em;
     font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    padding: 1.0em
+}
+
+button:hover{
+    background-color: hsl(25, 100%, 94%);
 }
 
 #originalPrice{
     text-decoration: line-through;
+}
+
+#cart:hover, #avatar:hover, button:hover, #thumbnails img:hover{
+    cursor: pointer;
+}
+
+#avatar:hover{
+    border: 1px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
 }
 
 /*#mobileMenu{
@@ -46,6 +63,13 @@ button{
     right: 0;
     background-color: white;
 }*/
+
+#percentOff{
+    background-color: hsl(220, 13%, 13%);
+    color: hsl(223, 64%, 98%);
+    padding: 0.2em;
+    border-radius: 0.5em;
+}
 
 .show{
     visibility: visible;
