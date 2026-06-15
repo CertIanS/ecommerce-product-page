@@ -51,8 +51,12 @@ button:hover{
     cursor: pointer;
 }
 
+#avatar{
+    border: 2px solid white;
+}
+
 #avatar:hover{
-    border: 1px solid hsl(26, 100%, 55%);
+    border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
 }
 
@@ -79,6 +83,11 @@ button:hover{
     width: 20em;
     height: 100vh;
     background-color: white;
+}
+
+.open{
+    pointer-events: none;
+    filter: brightness(50%);
 }
 
 @media(max-width: 60em){

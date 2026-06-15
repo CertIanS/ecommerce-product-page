@@ -1,16 +1,14 @@
 var mobileMenu = document.getElementById("mobileMenu");
+var mainBody = document.querySelector("main");
 
 function showMenu(){
-    //document.getElementById("mobileMenu").style.visibility = "visible";
-    document.querySelector("main").style.filter = "brightness(50%)";
     document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    mainBody.classList.add("open");
     mobileMenu.classList.add("show");
-
 }
 
 function hideMenu(){
-    //document.getElementById("mobileMenu").style.visibility = "hidden";
-    document.querySelector("main").style.filter = "brightness(100%)";
     document.body.style.backgroundColor = "white";
+    mainBody.classList.remove("open");
     mobileMenu.classList.remove("show");
 }
