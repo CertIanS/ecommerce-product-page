@@ -12,3 +12,11 @@ function hideMenu(){
     mainBody.classList.remove("open");
     mobileMenu.classList.remove("show");
 }
+
+function openLightBox(){
+    document.getElementById("lightBox").style.display = "block";
+}
+
+function closeLightBox(){
+    document.getElementById("lightBox").style.display = "none";
+}

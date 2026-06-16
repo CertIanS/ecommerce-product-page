@@ -30,6 +30,10 @@ li a:hover{
     text-decoration: underline hsl(26, 100%, 55%);
 }
 
+picture img:hover{
+    cursor: pointer;
+}
+
 button{
     background-color: hsl(26, 100%, 55%);
     border: none;
@@ -75,6 +79,21 @@ button:hover{
     border-radius: 0.5em;
 }
 
+#lightBox{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#closeLightBox:hover{
+    cursor: pointer;
+    color: hsl(26, 100%, 55%);
+}
+
 .show{
     visibility: visible;
     position: fixed;
@@ -88,6 +107,19 @@ button:hover{
 .open{
     pointer-events: none;
     filter: brightness(50%);
+}
+
+.column{
+    float: left;
+    width: 25%;
+}
+
+.column img{
+    border-radius: 1.0em;
+}
+
+.column img:hover{
+    cursor: pointer;
 }
 
 @media(max-width: 60em){

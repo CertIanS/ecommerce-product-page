@@ -29,42 +29,59 @@
       <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
     </header>
     <section id="main">
-    <section id="productImages">
-      <picture>
-        <img src="./images/image-product-1.jpg" alt="productImageOne" width="400" height="400"/>
-      </picture>
-      <section id="thumbnails">
-        <img src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="100" height="100"/>
-        <img src="./images/image-product-2-thumbnail.jpg" alt="imageTwo" width="100" height="100"/>
-        <img src="./images/image-product-3-thumbnail.jpg" alt="imageThree" width="100" height="100"/>
-        <img src="./images/image-product-4-thumbnail.jpg" alt="imageFour" width="100" height="100"/>
+      <section id="productImages">
+        <picture>
+          <img src="./images/image-product-1.jpg" onclick="openLightBox();" alt="productImageOne" width="400" height="400"/>
+        </picture>
+        <section id="thumbnails">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="100" height="100"/>
+          <img src="./images/image-product-2-thumbnail.jpg" alt="imageTwo" width="100" height="100"/>
+          <img src="./images/image-product-3-thumbnail.jpg" alt="imageThree" width="100" height="100"/>
+          <img src="./images/image-product-4-thumbnail.jpg" alt="imageFour" width="100" height="100"/>
+        </section>
       </section>
-      
-    </section>
 
-    <section id="productInfo">
-      <span>Sneaker Company</span>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      <h2>$125.00</h2>
-      <span id="percentOff">50%</span>
-      <p id="originalPrice">$250.00</p>
-      <input type="number" placeholder="0" min="0">
-      <button><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
-    </section>
+      <section id="productInfo">
+        <span>Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h2>$125.00</h2>
+        <span id="percentOff">50%</span>
+        <p id="originalPrice">$250.00</p>
+        <input type="number" placeholder="0" min="0">
+        <button><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
+      </section>
     </section>
     
   </main>
   <nav id="mobileMenu">
-      <a href="#" id="closeMenu" onclick="hideMenu();"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
-      <ul>
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <a href="#" id="closeMenu" onclick="hideMenu();"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
+    <ul>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="lightBox">
+    <span id="closeLightBox" onclick="closeLightBox();">&times;</span>
+    <section id="lightBoxContent">
+      <section class="column">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="imageOneThumbnail"/>
+      </section>
+      <section class="column">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="imageTwoThumbnail"/>
+      </section>
+      <section class="column">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="imageThreeThumbnail"/>
+      </section>
+      <section class="column">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="imageFourThumbnail"/>
+      </section>
+    </section>
+  </section>
 </body>
 </html>
