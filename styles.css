@@ -55,10 +55,6 @@ button:hover{
     cursor: pointer;
 }
 
-#avatar{
-    border: 2px solid white;
-}
-
 #avatar:hover{
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
@@ -82,11 +78,20 @@ button:hover{
 #lightBox{
     display: none;
     position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 70%;
+}
+
+#lightBoxContent{
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
 }
 
 #closeLightBox:hover{
@@ -107,6 +112,22 @@ button:hover{
 .open{
     pointer-events: none;
     filter: brightness(50%);
+}
+
+.slides{
+    display: none;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+
+}
+
+.next{
+    right: 0;
 }
 
 .column{
