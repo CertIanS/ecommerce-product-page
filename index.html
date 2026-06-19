@@ -25,7 +25,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <img src="./images/icon-cart.svg" id="cart" alt="cart" width="22" height="20"/>
+      <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
       <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
     </header>
     <section id="main">
@@ -53,8 +53,8 @@
         <h2>$125.00</h2>
         <span id="percentOff">50%</span>
         <p id="originalPrice">$250.00</p>
-        <input type="number" placeholder="0" min="0">
-        <button><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
+        <input id="itemQuantity" type="number" placeholder="0" min="0">
+        <button onclick="changeItems()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
       </section>
     </section>
     
@@ -101,6 +101,20 @@
       <section class="column">
         <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="imageFourThumbnail" onclick="showCurrentSlide(4)"/>
       </section>
+    </section>
+  </section>
+
+  <section id="cartContent" aria-describedby="cartHead">
+    <h1 id="cartHead">Cart</h1>
+    <hr>
+    <section id="empty">
+      <p>Your cart is empty</p>
+    </section>
+    <section id="cartItems">
+      <img src="./images/image-product-1-thumbnail.jpg" alt="shoes"/>
+      <span>Fall Limited Edition Sneakers</span>
+      <span>$125.00 x <span id="quantity"></span> $<span id="cost"></span></span>
+      <button id="checkout">Checkout</button>
     </section>
   </section>
 </body>

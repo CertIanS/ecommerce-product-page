@@ -1,6 +1,7 @@
 var mobileMenu = document.getElementById("mobileMenu");
 var mainBody = document.querySelector("main");
 var slideIndex = 1;
+var items = 0;
 
 function showMenu(){
     document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
@@ -55,4 +56,29 @@ function showSlides(n){
     }
     slides[slideIndex-1].style.display = "block";
     thumbs[slideIndex-1].className += " active";
+}
+
+function displayCart(id){
+    if(id === "cart" && document.getElementById("cartContent").style.display === "block")
+        document.getElementById("cartContent").style.display = "none";
+    else{
+        document.getElementById("cartContent").style.display = "block";
+    }
+    
+    if(items > 0){
+        document.getElementById("empty").style.display = "none";
+        document.getElementById("cartItems").style.display = "block";
+        document.getElementById("quantity").textContent = items;
+        document.getElementById("cost").textContent = items * 125.00;
+    }else{
+        document.getElementById("empty").style.display = "block";
+        document.getElementById("cartItems").style.display = "none";
+    }
+}
+
+function changeItems(){
+    items = document.getElementById("itemQuantity").value;
+    if(document.getElementById("cartContent").style.display === "block"){
+        displayCart();
+    }
 }

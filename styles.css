@@ -99,6 +99,16 @@ button:hover{
     color: hsl(26, 100%, 55%);
 }
 
+#cartContent{
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+#cartItems{
+    display: none;
+}
+
 .show{
     visibility: visible;
     position: fixed;
