@@ -55,6 +55,10 @@ button:hover{
     cursor: pointer;
 }
 
+#thumbnails img:hover{
+    filter: brightness(125%);
+}
+
 #avatar:hover{
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
@@ -128,6 +132,10 @@ button:hover{
     display: none;
 }
 
+.slides img{
+    border-radius: 10px;
+}
+
 .prev, .next{
     cursor: pointer;
     position: absolute;
@@ -151,6 +159,12 @@ button:hover{
 
 .column img:hover{
     cursor: pointer;
+    filter: brightness(125%);
+}
+
+.active{
+    border: 1px solid hsl(26, 100%, 55%);
+    filter: brightness(150%);
 }
 
 @media(max-width: 60em){

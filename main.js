@@ -34,6 +34,12 @@ function moveSlides(n){
 
 function currentSlide(n){
     slideIndex = n;
+    var thumbnails = document.getElementsByClassName("thumb");
+    var i;
+    for(i = 0; i < thumbnails.length; i++){
+        thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+    }
+    thumbnails[slideIndex-1].className += " active";
 }
 
 function showCurrentSlide(n){
