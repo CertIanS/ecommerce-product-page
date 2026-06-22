@@ -3,6 +3,13 @@ var mainBody = document.querySelector("main");
 var slideIndex = 1;
 var items = 0;
 
+let input = document.getElementById("quantityInput");
+const min = input.getAttribute("min");
+const step = Number(input.getAttribute("step") || 1);
+var value = Number(input.getAttribute("value") || 0);
+let number = document.getElementById("itemQuantity");
+number.innerHTML = value;
+
 function showMenu(){
     document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     mainBody.classList.add("open");
@@ -83,8 +90,24 @@ function displayCart(id){
 }
 
 function changeItems(){
-    items = document.getElementById("itemQuantity").value;
+    items = document.getElementById("itemQuantity").innerHTML;
     if(document.getElementById("cartContent").style.display === "block"){
         displayCart();
     }
+}
+
+function increase(){
+    value += step;
+    number.innerHTML = value;
+}
+
+function decrease(){
+    if(min){
+        if(value > min && value - step >= min){
+            value -= step;
+        }
+    }else{
+        value -= step;
+    }
+    number.innerHTML = value;
 }

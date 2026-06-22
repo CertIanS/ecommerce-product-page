@@ -113,6 +113,15 @@ button:hover{
     display: none;
 }
 
+#quantityInput{
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .show{
     visibility: visible;
     position: fixed;
@@ -167,10 +176,23 @@ button:hover{
     filter: brightness(150%);
 }
 
+.btn{
+    background-color: hsl(223, 64%, 98%);
+}
+
+.btn span{
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+}
+
 @media(max-width: 60em){
     nav{
         visibility: hidden;
         width: 0;
+    }
+
+    hr{
+        display: none;
     }
 
     #desktopMenu{
@@ -205,5 +227,9 @@ button:hover{
 
     #mobileMenu{
         display: none;
+    }
+
+    #quantityInput{
+        width: 25%;
     }
 }

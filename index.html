@@ -28,6 +28,7 @@
       <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
       <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
     </header>
+    <hr>
     <section id="main">
       <section id="productImages">
         <picture>
@@ -53,7 +54,18 @@
         <h2>$125.00</h2>
         <span id="percentOff">50%</span>
         <p id="originalPrice">$250.00</p>
-        <input id="itemQuantity" type="number" placeholder="0" min="0">
+        <!--<input id="itemQuantity" type="number" placeholder="0" min="0">-->
+        <section id="quantityInput" min="0" step="1" value="0">
+          <button type="button" class="btn" onclick="decrease();">
+            <span id="minus">-</span>
+          </button>
+          <section id="itemValue">
+              <span id="itemQuantity">0</span>
+            </section>
+          <button type="button" class="btn" onclick="increase();">
+            <span id="plus">+</span>
+          </button>
+        </section>
         <button onclick="changeItems()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
       </section>
     </section>
