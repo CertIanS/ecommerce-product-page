@@ -71,6 +71,21 @@ function showSlides(n){
     thumbs[slideIndex-1].className += " active";
 }
 
+function changeMobileImg(n){
+    slideIndex += n;
+    var imgs = document.getElementsByClassName("mobileImg");
+    if(slideIndex > imgs.length){
+        slideIndex = 1;
+    }
+    if(slideIndex < 1){
+        slideIndex = imgs.length;
+    }
+    for(var i = 0; i < imgs.length; i++){
+        imgs[i].style.display = "none";
+    }
+    imgs[slideIndex-1].style.display = "block";
+}
+
 function displayCart(id){
     if(id === "cart" && document.getElementById("cartContent").style.display === "block")
         document.getElementById("cartContent").style.display = "none";
@@ -89,7 +104,7 @@ function displayCart(id){
     }
 }
 
-function changeItems(){
+function changeCart(){
     items = document.getElementById("itemQuantity").innerHTML;
     if(document.getElementById("cartContent").style.display === "block"){
         displayCart();

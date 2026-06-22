@@ -195,12 +195,20 @@ button:hover{
         display: none;
     }
 
+    #mainImg{
+        display: none;
+    }
+
     #desktopMenu{
         display: none;
     }
 
     #productImages section{
         display: none;
+    }
+
+    #addToCart{
+        width: 100%;
     }
 }
 
@@ -231,5 +239,9 @@ button:hover{
 
     #quantityInput{
         width: 25%;
+    }
+
+    .mobileImg, .prevThumb, .nextThumb{
+        display: none;
     }
 }

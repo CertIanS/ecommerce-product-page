@@ -32,8 +32,19 @@
     <section id="main">
       <section id="productImages">
         <picture>
+          <a class="prevThumb" onclick="changeMobileImg(-1)">&#10094;</a>
+          <a class="nextThumb" onclick="changeMobileImg(1)">&#10095;</a>
+          <!--<source class="mobileImg" srcset="./images/image-product-1.jpg">
+          <source class="mobileImg" srcset="./images/image-product-2.jpg">
+          <source class="mobileImg" srcset="./images/image-product-3.jpg">
+          <source class="mobileImg" srcset="./images/image-product-4.jpg">-->
           <img id="mainImg" src="./images/image-product-1.jpg" onclick="openLightBox();" alt="productImageOne" width="400" height="400"/>
+          <img class="mobileImg" src="./images/image-product-1.jpg" alt="mobileImgOne" width="400" height="400"/>
+          <img class="mobileImg" src="./images/image-product-2.jpg" alt="mobileImgTwo" width="400" height="400" style="display: none"/>
+          <img class="mobileImg" src="./images/image-product-3.jpg" alt="mobileImgThree" width="400" height="400" style="display: none"/>
+          <img class="mobileImg" src="./images/image-product-4.jpg" alt="mobileImgFour" width="400" height="400" style="display: none"/>
         </picture>
+        
         <section id="thumbnails">
           <img class="thumb active" src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="100" height="100" 
           onclick="document.getElementById('mainImg').src = './images/image-product-1.jpg'; currentSlide(1)"/>
@@ -66,7 +77,7 @@
             <span id="plus">+</span>
           </button>
         </section>
-        <button onclick="changeItems()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
+        <button id="addToCart" onclick="changeCart()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
       </section>
     </section>
     
