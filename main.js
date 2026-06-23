@@ -98,6 +98,7 @@ function displayCart(id){
         document.getElementById("cartItems").style.display = "block";
         document.getElementById("quantity").textContent = items;
         document.getElementById("cost").textContent = items * 125.00;
+        
     }else{
         document.getElementById("empty").style.display = "block";
         document.getElementById("cartItems").style.display = "none";
@@ -106,6 +107,10 @@ function displayCart(id){
 
 function changeCart(){
     items = document.getElementById("itemQuantity").innerHTML;
+    document.getElementById("itemNumber").style.display = "block";
+    document.getElementById("itemNumber").textContent = items;
+    if(items === "0")
+        document.getElementById("itemNumber").style.display = "none";
     if(document.getElementById("cartContent").style.display === "block"){
         displayCart();
     }

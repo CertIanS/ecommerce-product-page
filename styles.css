@@ -55,6 +55,20 @@ button:hover{
     cursor: pointer;
 }
 
+#cartLink{
+    padding-top: 10px;
+}
+
+#itemNumber{
+    display: none;
+    position: absolute;
+    background: hsl(26, 100%, 55%);
+    top: 70px;
+    color: white;
+    font-size: 13px;
+    border-radius: 50%;
+}
+
 #thumbnails img:hover{
     filter: brightness(125%);
 }
@@ -218,6 +232,10 @@ button:hover{
 
     #productImages section{
         display: none;
+    }
+
+    #itemNumber{
+        top: 20px;
     }
 
     #addToCart{
