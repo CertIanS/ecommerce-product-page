@@ -64,14 +64,6 @@ button:hover{
     border-radius: 50%;
 }
 
-/*#mobileMenu{
-    visibility: hidden;
-    /*position: fixed;
-    top: 0;
-    right: 0;
-    background-color: white;
-}*/
-
 #percentOff{
     background-color: hsl(220, 13%, 13%);
     color: hsl(223, 64%, 98%);
@@ -87,7 +79,7 @@ button:hover{
     margin: auto;
     left: 0;
     right: 0;
-    width: 60%;
+    width: 500px;
     height: 70%;
 }
 
@@ -96,6 +88,10 @@ button:hover{
     margin: auto;
     padding: 0;
     width: 90%;
+}
+
+#closeLightBox{
+    color: white;
 }
 
 #closeLightBox:hover{
@@ -150,11 +146,28 @@ button:hover{
     position: absolute;
     top: 50%;
     width: auto;
+    background-color: white;
+    border-radius: 50%;
+}
 
+.prevThumb, .nextThumb{
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .next{
     right: 0;
+}
+
+.nextThumb{
+    margin-left: 390px;
+}
+
+.next:hover, .prev:hover, .nextThumb:hover, .prevThumb:hover{
+    color: hsl(26, 100%, 55%);
 }
 
 .column{
@@ -222,7 +235,7 @@ button:hover{
     }
 
     #productImages, #productInfo{
-        width: 50%;
+        width: 30.0em;
     }
 
     #openMenu{

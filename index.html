@@ -25,7 +25,8 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
+      <img src="./images/icon-cart.svg" id="cart" alt="cart"
+       onmouseover="displayCart(this.id)" onmouseout="document.getElementById('cartContent').style.display = 'none'" width="22" height="20"/>
       <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
     </header>
     <hr>
@@ -34,10 +35,6 @@
         <picture>
           <a class="prevThumb" onclick="changeMobileImg(-1)">&#10094;</a>
           <a class="nextThumb" onclick="changeMobileImg(1)">&#10095;</a>
-          <!--<source class="mobileImg" srcset="./images/image-product-1.jpg">
-          <source class="mobileImg" srcset="./images/image-product-2.jpg">
-          <source class="mobileImg" srcset="./images/image-product-3.jpg">
-          <source class="mobileImg" srcset="./images/image-product-4.jpg">-->
           <img id="mainImg" src="./images/image-product-1.jpg" onclick="openLightBox();" alt="productImageOne" width="400" height="400"/>
           <img class="mobileImg" src="./images/image-product-1.jpg" alt="mobileImgOne" width="400" height="400"/>
           <img class="mobileImg" src="./images/image-product-2.jpg" alt="mobileImgTwo" width="400" height="400" style="display: none"/>
@@ -97,32 +94,36 @@
     <span id="closeLightBox" onclick="closeLightBox();">&times;</span>
     <section id="lightBoxContent">
       <section class="slides">
-        <img src="./images/image-product-1.jpg" alt="productOne" width="300" height="300"/>
+        <img src="./images/image-product-1.jpg" alt="productOne" width="450" height="450"/>
       </section>
       <section class="slides">
-        <img src="./images/image-product-2.jpg" alt="productTwo" width="300" height="300"/>
+        <img src="./images/image-product-2.jpg" alt="productTwo" width="450" height="450"/>
       </section>
       <section class="slides">
-        <img src="./images/image-product-3.jpg" alt="productThree" width="300" height="300"/>
+        <img src="./images/image-product-3.jpg" alt="productThree" width="450" height="450"/>
       </section>
       <section class="slides">
-        <img src="./images/image-product-4.jpg" alt="productFour" width="300" height="300"/>
+        <img src="./images/image-product-4.jpg" alt="productFour" width="450" height="450"/>
       </section>
 
       <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
       <a class="next" onclick="moveSlides(1)">&#10095;</a>
 
       <section class="column">
-        <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="imageOneThumbnail" onclick="showCurrentSlide(1)"/>
+        <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="imageOneThumbnail" onclick="showCurrentSlide(1)"
+        width="100" height="100"/>
       </section>
       <section class="column">
-        <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="imageTwoThumbnail" onclick="showCurrentSlide(2)"/>
+        <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="imageTwoThumbnail" onclick="showCurrentSlide(2)"
+        width="100" height="100"/>
       </section>
       <section class="column">
-        <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="imageThreeThumbnail" onclick="showCurrentSlide(3)"/>
+        <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="imageThreeThumbnail" onclick="showCurrentSlide(3)"
+        width="100" height="100"/>
       </section>
       <section class="column">
-        <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="imageFourThumbnail" onclick="showCurrentSlide(4)"/>
+        <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="imageFourThumbnail" onclick="showCurrentSlide(4)"
+        width="100" height="100"/>
       </section>
     </section>
   </section>
