@@ -116,6 +116,14 @@ function changeCart(){
     }
 }
 
+function deleteCartItems(){
+    items = 0;
+    document.getElementById("itemNumber").style.display = "none";
+    document.getElementById("empty").style.display = "block";
+    document.getElementById("cartItems").style.display = "none";
+    document.getElementById("itemQuantity").innerHTML = 0;
+}
+
 function increase(){
     value += step;
     number.innerHTML = value;

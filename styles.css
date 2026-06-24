@@ -117,10 +117,24 @@ button:hover{
     display: none;
     position: absolute;
     background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#cartShoes{
+    border-radius: 10px;
 }
 
 #cartItems{
     display: none;
+}
+
+#checkout{
+    width: 100%;
+}
+
+#delete{
+    cursor: pointer;
 }
 
 #quantityInput{
@@ -241,6 +255,11 @@ button:hover{
     #addToCart{
         width: 100%;
     }
+
+    #cartContent{
+        width: 90%;
+        top: 100px;
+    }
 }
 
 @media(min-width: 60em){
@@ -270,6 +289,12 @@ button:hover{
 
     #quantityInput{
         width: 25%;
+    }
+
+    #cartContent{
+        top: 110px;
+        right: 300px;
+        width: 20%;
     }
 
     .mobileImg, .prevThumb, .nextThumb{
