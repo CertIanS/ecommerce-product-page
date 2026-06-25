@@ -47,10 +47,6 @@ button:hover{
     background-color: hsl(25, 100%, 94%);
 }
 
-#originalPrice{
-    text-decoration: line-through;
-}
-
 #cart:hover, #avatar:hover, button:hover, #thumbnails img:hover{
     cursor: pointer;
 }
@@ -69,6 +65,11 @@ button:hover{
     border-radius: 50%;
 }
 
+#thumbnails img{
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
 #thumbnails img:hover{
     filter: brightness(125%);
 }
@@ -78,11 +79,29 @@ button:hover{
     border-radius: 50%;
 }
 
+#sneaker{
+    color: hsl(219, 9%, 45%);
+    font-weight: bold;
+}
+
+#price{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
 #percentOff{
     background-color: hsl(220, 13%, 13%);
     color: hsl(223, 64%, 98%);
     padding: 0.2em;
     border-radius: 0.5em;
+    margin-right: 5px;
+}
+
+#originalPrice{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
 }
 
 #lightBox{
@@ -137,6 +156,10 @@ button:hover{
     cursor: pointer;
 }
 
+#productInfo p{
+    color: hsl(219, 9%, 45%);
+}
+
 #quantityInput{
     background-color: hsl(223, 64%, 98%);
     border-radius: 10px;
@@ -144,6 +167,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .show{
@@ -269,6 +293,7 @@ button:hover{
 
     #main{
         display: flex;
+        margin-top: 30px;
     }
 
     #productImages, #productInfo{
