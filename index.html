@@ -64,18 +64,20 @@
         <span id="price">$125.00</span>
         <span id="percentOff">50%</span>
         <span id="originalPrice">$250.00</span>
-        <section id="quantityInput" min="0" step="1" value="0">
-          <button type="button" class="btn" onclick="decrease();">
-            <span id="minus">-</span>
-          </button>
-          <section id="itemValue">
+        <section id="addItems">
+          <section id="quantityInput" min="0" step="1" value="0">
+            <button type="button" class="btn" onclick="decrease();">
+              <span id="minus">-</span>
+            </button>
+            <section id="itemValue">
               <span id="itemQuantity">0</span>
             </section>
-          <button type="button" class="btn" onclick="increase();">
-            <span id="plus">+</span>
-          </button>
+            <button type="button" class="btn" onclick="increase();">
+              <span id="plus">+</span>
+            </button>
+          </section>
+          <button id="addToCart" onclick="changeCart()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
         </section>
-        <button id="addToCart" onclick="changeCart()"><img src="./images/icon-cart.svg" alt="cart"/>Add to cart</button>
       </section>
     </section>
     

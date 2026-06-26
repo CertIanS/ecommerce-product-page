@@ -40,7 +40,7 @@ button{
     border-radius: 0.7em;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: bold;
-    padding: 1.0em
+    padding: 1.0em;
 }
 
 button:hover{
@@ -132,6 +132,14 @@ button:hover{
     color: hsl(26, 100%, 55%);
 }
 
+#addToCart{
+    width: 100%;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 #cartContent{
     display: none;
     position: absolute;
@@ -167,7 +175,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
 }
 
 .show{
@@ -276,10 +284,6 @@ button:hover{
         top: 20px;
     }
 
-    #addToCart{
-        width: 100%;
-    }
-
     #cartContent{
         width: 90%;
         top: 100px;
@@ -314,6 +318,12 @@ button:hover{
 
     #quantityInput{
         width: 25%;
+        margin-right: 10px;
+    }
+
+    #addItems{
+        display: flex;
+        margin-top: 15px;
     }
 
     #cartContent{
