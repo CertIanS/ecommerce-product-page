@@ -116,6 +116,12 @@ button:hover{
     height: 70%;
 }
 
+#lightBox p{
+    text-align: right;
+    margin: 0;
+    width: 475px;
+}
+
 #lightBoxContent{
     position: relative;
     margin: auto;
@@ -125,6 +131,7 @@ button:hover{
 
 #closeLightBox{
     color: white;
+    font-size: 40px;
 }
 
 #closeLightBox:hover{
@@ -175,7 +182,26 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*margin-top: 15px;*/
+}
+
+#mobileMenu{
+    position: absolute;
+    left: 0;
+    padding-top: 20px;
+}
+
+#mobileMenu ul{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+#mobileMenu li{
+    display: block;
+    font-weight: bold;
+}
+
+#closeMenu{
+    margin-left: 30px;
 }
 
 .show{
@@ -205,9 +231,9 @@ button:hover{
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     background-color: white;
     border-radius: 50%;
+    padding: 5px 10px 5px 10px;
 }
 
 .prevThumb, .nextThumb{
@@ -216,6 +242,7 @@ button:hover{
     top: 35%;
     background-color: white;
     border-radius: 50%;
+    padding: 5px 10px 5px 10px;
 }
 
 .next{
@@ -223,7 +250,7 @@ button:hover{
 }
 
 .nextThumb{
-    margin-left: 390px;
+    margin-left: 370px;
 }
 
 .next:hover, .prev:hover, .nextThumb:hover, .prevThumb:hover{
@@ -233,6 +260,10 @@ button:hover{
 .column{
     float: left;
     width: 25%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .column img{
@@ -259,6 +290,10 @@ button:hover{
 }
 
 @media(max-width: 60em){
+    header{
+        padding: 0 10px 10px 10px;
+    }
+
     nav{
         visibility: hidden;
         width: 0;
@@ -280,6 +315,22 @@ button:hover{
         display: none;
     }
 
+    #productInfo{
+        padding: 10px;
+    }
+
+    #originalPrice{
+        float: right;
+    }
+
+    #addItems{
+        padding-top: 10px;
+    }
+
+    #addToCart{
+        margin-top: 10px;
+    }
+
     #itemNumber{
         top: 20px;
     }
@@ -287,6 +338,11 @@ button:hover{
     #cartContent{
         width: 90%;
         top: 100px;
+    }
+
+    #avatar{
+        width: 30px;
+        height: 30px;
     }
 }
 
