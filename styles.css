@@ -30,10 +30,6 @@ li a:hover{
     text-decoration: underline hsl(26, 100%, 55%);
 }
 
-picture img:hover{
-    cursor: pointer;
-}
-
 button{
     background-color: hsl(26, 100%, 55%);
     border: none;
@@ -47,8 +43,12 @@ button:hover{
     background-color: hsl(25, 100%, 94%);
 }
 
-#cart:hover, #avatar:hover, button:hover, #thumbnails img:hover{
+picture img:hover, #cart:hover, #avatar:hover, button:hover, #thumbnails img:hover, #delete{
     cursor: pointer;
+}
+
+span p{
+    margin: 0;
 }
 
 #cartLink{
@@ -151,24 +151,31 @@ button:hover{
     display: none;
     position: absolute;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    padding: 10px;
-}
-
-#cartShoes{
-    border-radius: 10px;
+    padding: 20px;
 }
 
 #cartItems{
     display: none;
 }
 
-#checkout{
-    width: 100%;
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    margin: 20px 0 10px 0;
 }
 
-#delete{
-    cursor: pointer;
+#cartShoes{
+    border-radius: 5px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#checkout{
+    width: 100%;
+    margin-top: 1.0em;
 }
 
 #productInfo p{
@@ -223,8 +230,8 @@ button:hover{
     display: none;
 }
 
-.slides img{
-    border-radius: 10px;
+.slides img, .column img{
+    border-radius: 1.0em;
 }
 
 .prev, .next{
@@ -236,6 +243,10 @@ button:hover{
     padding: 5px 10px 5px 10px;
 }
 
+.next{
+    right: 0;
+}
+
 .prevThumb, .nextThumb{
     cursor: pointer;
     position: absolute;
@@ -243,10 +254,6 @@ button:hover{
     background-color: white;
     border-radius: 50%;
     padding: 5px 10px 5px 10px;
-}
-
-.next{
-    right: 0;
 }
 
 .nextThumb{
@@ -264,10 +271,6 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.column img{
-    border-radius: 1.0em;
 }
 
 .column img:hover{
@@ -299,19 +302,7 @@ button:hover{
         width: 0;
     }
 
-    hr{
-        display: none;
-    }
-
-    #mainImg{
-        display: none;
-    }
-
-    #desktopMenu{
-        display: none;
-    }
-
-    #productImages section{
+    main hr, #mainImg, #desktopMenu, #productImages section{
         display: none;
     }
 
@@ -360,16 +351,12 @@ button:hover{
         width: 30.0em;
     }
 
-    #openMenu{
+    #openMenu, #mobileMenu{
         display: none;
     }
 
     #productImages img{
         border-radius: 1.0em;
-    }
-
-    #mobileMenu{
-        display: none;
     }
 
     #quantityInput{

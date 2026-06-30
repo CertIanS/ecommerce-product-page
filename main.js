@@ -96,6 +96,7 @@ function displayCart(id){
     if(items > 0){
         document.getElementById("empty").style.display = "none";
         document.getElementById("cartItems").style.display = "block";
+        
         document.getElementById("quantity").textContent = items;
         document.getElementById("cost").textContent = items * 125.00;
         
@@ -117,7 +118,7 @@ function changeCart(){
 }
 
 function deleteCartItems(){
-    items = 0;
+    items, value = 0;
     document.getElementById("itemNumber").style.display = "none";
     document.getElementById("empty").style.display = "block";
     document.getElementById("cartItems").style.display = "none";

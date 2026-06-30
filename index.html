@@ -80,8 +80,8 @@
         </section>
       </section>
     </section>
-    
   </main>
+
   <nav id="mobileMenu">
     <a href="#" id="closeMenu" onclick="hideMenu();"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
     <ul>
@@ -132,17 +132,18 @@
   </section>
 
   <section id="cartContent" aria-describedby="cartHead">
-    <h1 id="cartHead">Cart</h1>
-    
+    <h3 id="cartHead">Cart</h3>
+    <hr>
     <section id="empty">
       <p>Your cart is empty</p>
     </section>
     <section id="cartItems">
-      <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" id="cartShoes" width="100" height="100"/>
-      <span>Fall Limited Edition Sneakers</span>
-      <span>$125.00 x <span id="quantity"></span> $<span id="cost"></span>.00</span>
-      <img src="./images/icon-delete.svg" alt="delete" id="delete" onclick="deleteCartItems();"/>
-      <br>
+      <section id="grid">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" id="cartShoes" width="50" height="50"/>
+        <span><p>Fall Limited Edition Sneakers</p>
+        <span>$125.00 x <span id="quantity"></span> <b>$<span id="cost"></span>.00</b></span></span>
+        <img src="./images/icon-delete.svg" alt="delete" id="delete" onclick="deleteCartItems();"/>
+      </section>
       <button id="checkout">Checkout</button>
     </section>
   </section>
