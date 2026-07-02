@@ -14,8 +14,9 @@
 <body>
   <main>
     <header>
-      <a href="#" id="openMenu" onclick="showMenu();"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
-      <img src="./images/logo.svg" alt="logo" width="138" height="20"/>
+      <section id="headLeft">
+        <a href="#" id="openMenu" onclick="showMenu();"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
+      <img src="./images/logo.svg" alt="logo" id="sneakerLogo" width="138" height="20"/>
       <nav id="desktopMenu">
         <ul>
           <li><a href="#">Collections</a></li>
@@ -25,11 +26,15 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <a id="cartLink" href="#">
+      </section>
+      <section id="headRight">
+        <a id="cartLink" href="#">
         <span id="itemNumber">0</span>
         <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
       </a>
       <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
+      </section>
+      
     </header>
     <hr>
     <section id="main">
@@ -57,7 +62,7 @@
       </section>
 
       <section id="productInfo" aria-describedby="sneaker">
-        <span id="sneaker">Sneaker Company</span>
+        <span id="sneaker">SNEAKER COMPANY</span>
         <h1>Fall Limited Edition Sneakers</h1>
         <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
     durable rubber outer sole, they’ll withstand everything the weather can offer.</p>

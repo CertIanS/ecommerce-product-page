@@ -28,6 +28,8 @@ li a{
 li a:hover{
     color: hsl(220, 13%, 13%);
     text-decoration: underline hsl(26, 100%, 55%);
+    /*text-underline-offset: 25px;
+    text-decoration-thickness: 4px;*/
 }
 
 button{
@@ -49,6 +51,15 @@ picture img:hover, #cart:hover, #avatar:hover, button:hover, #thumbnails img:hov
 
 span p{
     margin: 0;
+}
+
+#headLeft, #headRight{
+    display: inline-flex;
+    align-items: center;
+}
+
+#headRight #cart{
+    margin-right: 2.0em;
 }
 
 #cartLink{
@@ -306,6 +317,10 @@ span p{
         display: none;
     }
 
+    #sneakerLogo{
+        margin-left: 1.5em;
+    }
+
     #productInfo{
         padding: 10px;
     }
@@ -340,6 +355,11 @@ span p{
 @media(min-width: 60em){
     main{
         padding: 50px 150px 0 150px;
+    }
+
+    li a:hover{
+        text-underline-offset: 25px;
+        text-decoration-thickness: 4px;
     }
 
     #main{
