@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -15,26 +15,25 @@
   <main>
     <header>
       <section id="headLeft">
-        <a href="#" id="openMenu" onclick="showMenu();"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
-      <img src="./images/logo.svg" alt="logo" id="sneakerLogo" width="138" height="20"/>
-      <nav id="desktopMenu">
-        <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <a href="#" id="openMenu" onclick="showMenu();" aria-label="openMenu"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
+        <img src="./images/logo.svg" alt="logo" id="sneakerLogo" width="138" height="20"/>
+        <nav id="desktopMenu">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </section>
       <section id="headRight">
-        <a id="cartLink" href="#">
-        <span id="itemNumber">0</span>
-        <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
-      </a>
-      <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
+        <a id="cartLink" href="#" aria-label="cart">
+          <span id="itemNumber">0</span>
+          <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
+        </a>
+        <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
       </section>
-      
     </header>
     <hr>
     <section id="main">
@@ -87,8 +86,8 @@
     </section>
   </main>
 
-  <nav id="mobileMenu">
-    <a href="#" id="closeMenu" onclick="hideMenu();"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
+  <nav id="mobileMenu" aria-labe="menu">
+    <a href="#" id="closeMenu" onclick="hideMenu();" aria-label="closeMenu"><img src="./images/icon-close.svg" alt="closeMenu"/></a>
     <ul>
       <li><a href="#">Collections</a></li>
       <li><a href="#">Men</a></li>
@@ -114,8 +113,8 @@
         <img src="./images/image-product-4.jpg" alt="productFour" width="450" height="450"/>
       </section>
 
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+      <a class="prev" onclick="moveSlides(-1)" aria-label="nextSlide">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)" aria-label="previousSlide">&#10095;</a>
 
       <section class="column">
         <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="imageOneThumbnail" onclick="showCurrentSlide(1)"
