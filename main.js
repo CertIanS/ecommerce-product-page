@@ -101,7 +101,7 @@ function displayCart(id){
         document.getElementById("cost").textContent = items * 125.00;
         
     }else{
-        document.getElementById("empty").style.display = "block";
+        document.getElementById("empty").style.display = "flex";
         document.getElementById("cartItems").style.display = "none";
     }
 }
@@ -118,9 +118,9 @@ function changeCart(){
 }
 
 function deleteCartItems(){
-    items, value = 0;
+    items = value = 0;
     document.getElementById("itemNumber").style.display = "none";
-    document.getElementById("empty").style.display = "block";
+    document.getElementById("empty").style.display = "flex";
     document.getElementById("cartItems").style.display = "none";
     document.getElementById("itemQuantity").innerHTML = 0;
 }
