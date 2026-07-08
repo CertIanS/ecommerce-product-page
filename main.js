@@ -2,6 +2,10 @@ var mobileMenu = document.getElementById("mobileMenu");
 var mainBody = document.querySelector("main");
 var slideIndex = 1;
 var items = 0;
+var mobileI = document.getElementsByClassName("mobileImg");
+var slidesI = document.getElementsByClassName("slides");
+var thumbsI = document.getElementsByClassName("thumbnail");
+var thumbnailsI = document.getElementsByClassName("thumb");
 
 let input = document.getElementById("quantityInput");
 const min = input.getAttribute("min");
@@ -41,12 +45,7 @@ function moveSlides(n){
 
 function currentSlide(n){
     slideIndex = n;
-    var thumbnails = document.getElementsByClassName("thumb");
-    var i;
-    for(i = 0; i < thumbnails.length; i++){
-        thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-    }
-    thumbnails[slideIndex-1].className += " active";
+    changeImg(thumbnailsI);
 }
 
 function showCurrentSlide(n){
@@ -55,35 +54,45 @@ function showCurrentSlide(n){
 
 function showSlides(n){
     var i;
-    var slides = document.getElementsByClassName("slides");
-    var thumbs = document.getElementsByClassName("thumbnail");
-    if(n > slides.length)
+    if(n > slidesI.length)
         slideIndex = 1;
     if(n < 1)
-        slideIndex = slides.length;
-    for(i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
+        slideIndex = slidesI.length;
+    for(i = 0; i < slidesI.length; i++){
+        slidesI[i].style.display = "none";
     }
-    for(i = 0; i < thumbs.length; i++){
-        thumbs[i].className = thumbs[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    thumbs[slideIndex-1].className += " active";
+    changeImg(thumbsI);
+    changeImg(thumbnailsI);
+    slidesI[slideIndex-1].style.display = "block";
+    document.getElementById('mainImg').src = './images/image-product-' + slideIndex + '.jpg';
 }
 
 function changeMobileImg(n){
     slideIndex += n;
-    var imgs = document.getElementsByClassName("mobileImg");
-    if(slideIndex > imgs.length){
+    if(slideIndex > mobileI.length){
         slideIndex = 1;
     }
     if(slideIndex < 1){
-        slideIndex = imgs.length;
+        slideIndex = mobileI.length;
     }
-    for(var i = 0; i < imgs.length; i++){
-        imgs[i].style.display = "none";
+    for(var i = 0; i < mobileI.length; i++){
+        mobileI[i].className = mobileI[i].className.replace(" mobileShow", " mobileHide");
+        thumbnailsI[i].className = thumbnailsI[i].className.replace(" active", "");
+        thumbsI[i].className = thumbsI[i].className.replace(" active", "");
     }
-    imgs[slideIndex-1].style.display = "block";
+    mobileI[slideIndex-1].className = mobileI[slideIndex-1].className.replace(" mobileHide", " mobileShow");
+    thumbnailsI[slideIndex-1].className += " active";
+    thumbsI[slideIndex-1].className += " active";
+    document.getElementById('mainImg').src = './images/image-product-' + slideIndex + '.jpg';
+}
+
+function changeImg(imgsArr){
+    for(var i = 0; i < imgsArr.length; i++){
+        imgsArr[i].className = imgsArr[i].className.replace(" active", "");
+        mobileI[i].className = mobileI[i].className.replace(" mobileShow", " mobileHide");
+    }
+    imgsArr[slideIndex-1].className += " active";
+    mobileI[slideIndex-1].className = mobileI[slideIndex-1].className.replace(" mobileHide", " mobileShow");
 }
 
 function displayCart(id){
@@ -96,10 +105,8 @@ function displayCart(id){
     if(items > 0){
         document.getElementById("empty").style.display = "none";
         document.getElementById("cartItems").style.display = "block";
-        
         document.getElementById("quantity").textContent = items;
         document.getElementById("cost").textContent = items * 125.00;
-        
     }else{
         document.getElementById("empty").style.display = "flex";
         document.getElementById("cartItems").style.display = "none";
