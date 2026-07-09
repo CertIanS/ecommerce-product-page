@@ -15,28 +15,28 @@ let number = document.getElementById("itemQuantity");
 number.innerHTML = value;
 
 function showMenu(){
-    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    document.body.classList.add("greyMenu");
     mainBody.classList.add("open");
     mobileMenu.classList.add("show");
 }
 
 function hideMenu(){
-    document.body.style.backgroundColor = "white";
+    document.body.classList.remove("greyMenu");
     mainBody.classList.remove("open");
     mobileMenu.classList.remove("show");
 }
 
 function openLightBox(){
-    document.getElementById("lightBox").style.display = "block";
-    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    mainBody.classList.add("open");
+    document.getElementById("lightBox").style.visibility = "visible";
+    document.body.classList.add("greyLightbox");
+    mainBody.classList.add("openLightbox");
     showSlides(slideIndex);
 }
 
 function closeLightBox(){
-    document.getElementById("lightBox").style.display = "none";
-    document.body.style.backgroundColor = "white";
-    mainBody.classList.remove("open");
+    document.getElementById("lightBox").style.visibility = "hidden";
+    document.body.classList.remove("greyLightbox");
+    mainBody.classList.remove("openLightbox");
 }
 
 function moveSlides(n){
@@ -79,10 +79,12 @@ function changeMobileImg(n){
         mobileI[i].className = mobileI[i].className.replace(" mobileShow", " mobileHide");
         thumbnailsI[i].className = thumbnailsI[i].className.replace(" active", "");
         thumbsI[i].className = thumbsI[i].className.replace(" active", "");
+        slidesI[i].style.display = "none";
     }
     mobileI[slideIndex-1].className = mobileI[slideIndex-1].className.replace(" mobileHide", " mobileShow");
     thumbnailsI[slideIndex-1].className += " active";
     thumbsI[slideIndex-1].className += " active";
+    slidesI[slideIndex-1].style.display = "block";
     document.getElementById('mainImg').src = './images/image-product-' + slideIndex + '.jpg';
 }
 

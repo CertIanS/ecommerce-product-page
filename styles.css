@@ -28,8 +28,6 @@ li a{
 li a:hover{
     color: hsl(220, 13%, 13%);
     text-decoration: underline hsl(26, 100%, 55%);
-    /*text-underline-offset: 25px;
-    text-decoration-thickness: 4px;*/
 }
 
 button{
@@ -120,7 +118,8 @@ hr{
 }
 
 #lightBox{
-    display: none;
+    display: block;
+    visibility: hidden;
     position: fixed;
     align-items: center;
     justify-content: center;
@@ -242,11 +241,6 @@ hr{
     width: 20em;
     height: 100vh;
     background-color: white;
-}
-
-.open{
-    pointer-events: none;
-    filter: brightness(50%);
 }
 
 .slides{
@@ -372,12 +366,25 @@ hr{
         height: 30px;
     }
 
+    #lightBox{
+        display: none;
+    }
+
     .mobileShow{
         display: block;
     }
 
     .mobileHide{
         display: none;
+    }
+
+    .open{
+        pointer-events: none;
+        filter: brightness(50%);
+    }
+
+    .greyMenu{
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -435,5 +442,14 @@ hr{
 
     .mobileImg, .prevThumb, .nextThumb{
         display: none;
+    }
+
+    .greyLightbox{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .openLightbox{
+        pointer-events: none;
+        filter: brightness(50%);
     }
 }
