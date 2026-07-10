@@ -20,6 +20,10 @@ li{
     display: inline;
 }
 
+a{
+    text-decoration: none;
+}
+
 li a{
     text-decoration: none;
     color: hsl(219, 9%, 45%);
@@ -271,6 +275,7 @@ hr{
     background-color: white;
     border-radius: 50%;
     padding: 5px 10px 5px 10px;
+    text-decoration: none;
 }
 
 .prevThumb{
@@ -323,7 +328,7 @@ hr{
         width: 0;
     }
 
-    main hr, #mainImg, #desktopMenu, #productImages section{
+    main hr, #mainImg, #desktopMenu, #productImages section, #lightBox{
         display: none;
     }
 
@@ -357,17 +362,13 @@ hr{
     }
 
     #cartContent{
-        width: 90%;
+        width: 360px;
         top: 100px;
     }
 
     #avatar{
         width: 30px;
         height: 30px;
-    }
-
-    #lightBox{
-        display: none;
     }
 
     .mobileShow{
@@ -436,7 +437,8 @@ hr{
     #cartContent{
         top: 110px;
         right: 200px;
-        width: 20%;
+        left: 63%;
+        width: 340px;
         height: 30%;
     }
 

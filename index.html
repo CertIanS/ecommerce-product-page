@@ -17,7 +17,7 @@
       <section id="headLeft">
         <a href="#" id="openMenu" onclick="showMenu();" aria-label="openMenu"><img src="./images/icon-menu.svg" alt="openMenu"/></a>
         <img src="./images/logo.svg" alt="logo" id="sneakerLogo" width="138" height="20"/>
-        <nav id="desktopMenu">
+        <nav id="desktopMenu" aria-label="menu">
           <ul>
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
@@ -28,9 +28,9 @@
         </nav>
       </section>
       <section id="headRight">
-        <a id="cartLink" href="#" aria-label="cart">
+        <a id="cartLink" href="#" aria-label="cart" onclick="displayCart('cart')">
           <span id="itemNumber">0</span>
-          <img src="./images/icon-cart.svg" id="cart" alt="cart" onclick="displayCart(this.id)" width="22" height="20"/>
+          <img src="./images/icon-cart.svg" id="cart" alt="cart" width="22" height="20"/>
         </a>
         <img src="./images/image-avatar.png" id="avatar" alt="avatar" width="50" height="50"/>
       </section>
@@ -39,9 +39,9 @@
     <section id="main">
       <section id="productImages">
         <picture>
-          <a class="prevThumb" onclick="changeMobileImg(-1)">&#10094;</a>
-          <a class="nextThumb" onclick="changeMobileImg(1)">&#10095;</a>
-          <img id="mainImg" src="./images/image-product-1.jpg" onclick="openLightBox();" alt="productImageOne" width="400" height="400"/>
+          <a class="prevThumb" href="#" onclick="changeMobileImg(-1)" aria-label="previousSlide">&#10094;</a>
+          <a class="nextThumb" href="#" onclick="changeMobileImg(1)" aria-label="nextSlide">&#10095;</a>
+          <a href="#" onclick="openLightBox();"><img id="mainImg" src="./images/image-product-1.jpg" alt="productImageOne" width="400" height="400"/></a>
           <img class="mobileImg mobileShow" src="./images/image-product-1.jpg" alt="mobileImgOne" width="400" height="400"/>
           <img class="mobileImg mobileHide" src="./images/image-product-2.jpg" alt="mobileImgTwo" width="400" height="400"/>
           <img class="mobileImg mobileHide" src="./images/image-product-3.jpg" alt="mobileImgThree" width="400" height="400"/>
@@ -49,14 +49,14 @@
         </picture>
         
         <section id="thumbnails">
-          <img class="thumb active" src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="90" height="90" 
-          onclick="document.getElementById('mainImg').src = './images/image-product-1.jpg'; currentSlide(1)"/>
+          <img class="thumb active" src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="90" height="90"
+            onclick="document.getElementById('mainImg').src = './images/image-product-1.jpg'; currentSlide(1)"/>
           <img class="thumb" src="./images/image-product-2-thumbnail.jpg" alt="imageTwo" width="90" height="90" 
-          onclick="document.getElementById('mainImg').src = './images/image-product-2.jpg'; currentSlide(2)"/>
-          <img class="thumb" src="./images/image-product-3-thumbnail.jpg" alt="imageThree" width="90" height="90" 
-          onclick="document.getElementById('mainImg').src = './images/image-product-3.jpg'; currentSlide(3)"/>
-          <img class="thumb" src="./images/image-product-4-thumbnail.jpg" alt="imageFour" width="90" height="90" 
-          onclick="document.getElementById('mainImg').src = './images/image-product-4.jpg'; currentSlide(4)"/>
+            onclick="document.getElementById('mainImg').src = './images/image-product-2.jpg'; currentSlide(2)"/>
+          <img class="thumb" src="./images/image-product-3-thumbnail.jpg" alt="imageThree" width="90" height="90"
+            onclick="document.getElementById('mainImg').src = './images/image-product-3.jpg'; currentSlide(3)"/>
+          <img class="thumb" src="./images/image-product-4-thumbnail.jpg" alt="imageFour" width="90" height="90"
+            onclick="document.getElementById('mainImg').src = './images/image-product-4.jpg'; currentSlide(4)"/>
         </section>
       </section>
 
@@ -97,8 +97,8 @@
     </ul>
   </nav>
 
-  <section id="lightBox">
-    <p><span id="closeLightBox" onclick="closeLightBox();">&times;</span></p>
+  <section id="lightBox" aria-label="lightBox">
+    <a href="#" onclick="closeLightBox();" aria-label="closeLightBox"><span id="closeLightBox">&times;</span></a>
     <section id="lightBoxContent">
       <section class="slides">
         <img src="./images/image-product-1.jpg" alt="productOne" width="450" height="450"/>
@@ -112,10 +112,8 @@
       <section class="slides">
         <img src="./images/image-product-4.jpg" alt="productFour" width="450" height="450"/>
       </section>
-
-      <a class="prev" onclick="moveSlides(-1)" aria-label="nextSlide">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)" aria-label="previousSlide">&#10095;</a>
-
+      <a href="#" class="prev" onclick="moveSlides(-1)" aria-label="previousSlide">&#10094;</a>
+      <a href="#" class="next" onclick="moveSlides(1)" aria-label="nextSlide">&#10095;</a>
       <section class="column">
         <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="imageOneThumbnail" onclick="showCurrentSlide(1)"
         width="75" height="75"/>
@@ -146,7 +144,7 @@
         <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" id="cartShoes" width="50" height="50"/>
         <span><p>Fall Limited Edition Sneakers</p>
         <span>$125.00 x <span id="quantity"></span> <b>$<span id="cost"></span>.00</b></span></span>
-        <img src="./images/icon-delete.svg" alt="delete" id="delete" onclick="deleteCartItems();"/>
+        <a href="#" onclick="deleteCartItems();"><img src="./images/icon-delete.svg" alt="delete" id="delete"/></a>
       </section>
       <button id="checkout">Checkout</button>
     </section>
