@@ -38,16 +38,13 @@
     <hr>
     <section id="main">
       <section id="productImages">
-        <picture>
-          <a class="prevThumb" href="#" onclick="changeMobileImg(-1)" aria-label="previousSlide">&#10094;</a>
-          <a class="nextThumb" href="#" onclick="changeMobileImg(1)" aria-label="nextSlide">&#10095;</a>
-          <a href="#" onclick="openLightBox();"><img id="mainImg" src="./images/image-product-1.jpg" alt="productImageOne" width="400" height="400"/></a>
-          <img class="mobileImg mobileShow" src="./images/image-product-1.jpg" alt="mobileImgOne" width="400" height="400"/>
-          <img class="mobileImg mobileHide" src="./images/image-product-2.jpg" alt="mobileImgTwo" width="400" height="400"/>
-          <img class="mobileImg mobileHide" src="./images/image-product-3.jpg" alt="mobileImgThree" width="400" height="400"/>
-          <img class="mobileImg mobileHide" src="./images/image-product-4.jpg" alt="mobileImgFour" width="400" height="400"/>
-        </picture>
-        
+        <a class="prevThumb" href="#" onclick="changeMobileImg(-1)" aria-label="previousSlide">&#10094;</a>
+        <a class="nextThumb" href="#" onclick="changeMobileImg(1)" aria-label="nextSlide">&#10095;</a>
+        <a href="#" onclick="openLightBox();"><img id="mainImg" src="./images/image-product-1.jpg" alt="productImageOne" width="400" height="400"/></a>
+        <img class="mobileImg mobileShow" src="./images/image-product-1.jpg" alt="mobileImgOne" width="400" height="400"/>
+        <img class="mobileImg mobileHide" src="./images/image-product-2.jpg" alt="mobileImgTwo" width="400" height="400"/>
+        <img class="mobileImg mobileHide" src="./images/image-product-3.jpg" alt="mobileImgThree" width="400" height="400"/>
+        <img class="mobileImg mobileHide" src="./images/image-product-4.jpg" alt="mobileImgFour" width="400" height="400"/>
         <section id="thumbnails">
           <img class="thumb active" src="./images/image-product-1-thumbnail.jpg" alt="imageOne" width="90" height="90"
             onclick="document.getElementById('mainImg').src = './images/image-product-1.jpg'; currentSlide(1)"/>
@@ -146,7 +143,7 @@
         <span>$125.00 x <span id="quantity"></span> <b>$<span id="cost"></span>.00</b></span></span>
         <a href="#" onclick="deleteCartItems();"><img src="./images/icon-delete.svg" alt="delete" id="delete"/></a>
       </section>
-      <button id="checkout">Checkout</button>
+      <button id="checkout" type="button">Checkout</button>
     </section>
   </section>
 </body>

@@ -47,7 +47,7 @@ button:hover{
     background-color: hsl(25, 100%, 94%);
 }
 
-picture img:hover, #cart:hover, #avatar:hover, button:hover, #thumbnails img:hover, #delete{
+img:hover, #cart:hover, #avatar:hover, button:hover, #thumbnails img:hover, #delete{
     cursor: pointer;
 }
 
@@ -279,11 +279,11 @@ hr{
 }
 
 .prevThumb{
-    margin-right: 370px;
+    margin-right: 23.0em;
 }
 
 .nextThumb{
-    margin-left: 370px;
+    margin-left: 23.0em;
 }
 
 .next:hover, .prev:hover, .nextThumb:hover, .prevThumb:hover{
@@ -335,6 +335,13 @@ hr{
     picture{
         display: flex;
         justify-content: center;
+    }
+
+    #productImages{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     #sneakerLogo{
